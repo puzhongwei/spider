@@ -8,6 +8,7 @@ import time
 import pymongo
 print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
 
+
 def get1():
     try:
         conn = pymongo.MongoClient('localhost', 27017)
