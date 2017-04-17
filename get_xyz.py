@@ -12,9 +12,9 @@ print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
 
 def fun():
     data = {
-        'north': '40',
+        'north': '30',
         'west': '0',
-        'east': '40',
+        'east': '30',
         'south': '0',
         'mag': '1'
     }
@@ -22,7 +22,7 @@ def fun():
     s = requests.session()
     r = s.post(url, data=data)
     tmp = r.content.decode('utf-8')
-    f = open('/usr/local/spark/gaochen/data.xyz', 'wb')
+    f = open('/usr/local/spark/gaochen/data4.xyz', 'wb')
     f.write(bytes(tmp, 'UTF-8'))
     f.close()
 if __name__ == '__main__':
